@@ -2,7 +2,7 @@ package com.bbd;
 
 public class Person {
     enum Type {
-        PRESIDENT, LAWYER, ARCHITECT
+        PRESIDENT, LAWYER, ARCHITECT, POLITICIAN
     }
 
     String name;
