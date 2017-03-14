@@ -1,5 +1,5 @@
 package com.bbd;
-interface Visitor {
 
+interface Visitor {
     void visit(HomeStead home);
 }
