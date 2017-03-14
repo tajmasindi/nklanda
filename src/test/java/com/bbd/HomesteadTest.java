@@ -20,7 +20,7 @@ public class HomesteadTest {
          JuliusMalema = new Politician("Julius Malema",40,"MALE");
          JacobZuma = new President("Jacob Zuma",70,"MALE");         
           BarryRoux = new Lawyer("Barry Roux",60,"MALE");
-          nkandla_homestead = new Nklandla();
+          nkandla_homestead = new Nklandla("Nkandla","Nkandla","Western Cape","ZA");
     }
 
     @Test
