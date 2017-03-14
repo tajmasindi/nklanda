@@ -13,6 +13,11 @@ public class HomeStead {
         country = c;
     }
 
+    public void accept(Visitor visitor) {
+        if (visitor != null)
+            visitor.visit(this);
+    }
+
     public String toString() {
         return "";
     }
