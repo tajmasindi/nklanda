@@ -6,6 +6,13 @@ public class HomeStead {
     private String province;
     private String country;
 
+    public HomeStead(String n, String d, String p, String c) {
+        name = n;
+        district = d;
+        province = p;
+        country = c;
+    }
+
     public String toString() {
         return "";
     }
