@@ -18,7 +18,7 @@ public class PersonTest {
     public void setUp() throws Exception {
         HelenZille = new Politician("Helen Zille",50,"FEMALE");
          JuliusMalema = new Politician("Julius Malema",50,"MALE");
-          BarryRoux = new Lawyer("Julius Malema",50,"MALE");
+          BarryRoux = new Lawyer("Berry  Malema",50,"MALE");
 
     }
 
