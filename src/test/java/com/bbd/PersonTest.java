@@ -3,7 +3,9 @@ package com.bbd;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
 import com.bbd.*;
+import com.bbd.Person.Type;
 
 public class PersonTest {
 
@@ -14,9 +16,9 @@ public class PersonTest {
 
     @Before
     public void setUp() throws Exception {
-        HelenZille = new Politician();
-         JuliusMalema = new Politician();
-          BarryRoux = new Lawyer();
+        HelenZille = new Politician("Helen Zille",50,"FEMALE");
+         JuliusMalema = new Politician("Julius Malema",50,"MALE");
+          BarryRoux = new Lawyer("Julius Malema",50,"MALE");
 
     }
 
@@ -27,17 +29,22 @@ public class PersonTest {
 
     @Test
     public void testPersonAges() {
-        assertEquals(HelenZille.getAge(),20);
+        assertEquals(HelenZille.getAge(),50);
     }
 
     @Test
     public void testPersonGender() {
-        assertEquals(HelenZille.getGender(),"MALE");
+        assertEquals(HelenZille.getGender(),"FEMALE");
     }
 
     @Test
     public void testPersonType() {
-        assertEquals(HelenZille.getType(),PersonType.Politician);
+        assertEquals(HelenZille.getType(),Type.POLITICIAN);
+    }
+
+        @Test
+    public void isAPolitician() {
+        assertEquals(HelenZille instanceof Politician,true);
     }
 
 
