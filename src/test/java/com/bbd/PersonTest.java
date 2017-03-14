@@ -3,6 +3,7 @@ package com.bbd;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import com.bbd.*;
 
 public class PersonTest {
 
@@ -21,23 +22,22 @@ public class PersonTest {
 
     @Test
     public void testPersonNames() {
-        AssertEqual(HelenZille.getName(),"Helen Zille");
-
+        assertEquals(HelenZille.getName(),"Helen Zille");
     }
 
     @Test
     public void testPersonAges() {
-        AssertEqual(HelenZille.getAge(),20);
+        assertEquals(HelenZille.getAge(),20);
     }
 
     @Test
     public void testPersonGender() {
-        AssertEqual(HelenZille.getGender(),"MALE");
+        assertEquals(HelenZille.getGender(),"MALE");
     }
 
     @Test
     public void testPersonType() {
-        AssertEqual(HelenZille.getType(),PersonType.Politician);
+        assertEquals(HelenZille.getType(),PersonType.Politician);
     }
 
 
