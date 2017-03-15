@@ -12,9 +12,8 @@ public class HomesteadTest {
     Person HelenZille;
     Person JuliusMalema;
     Person JacobZuma;
-    Person BarryRoux;  
+    Person BarryRoux;
     Person MichaelHulley;
-
 
     /*
         - Initialising all Person classes before we use them;
@@ -24,18 +23,19 @@ public class HomesteadTest {
 
     @Before
     public void setUp() throws Exception {
-        HelenZille      = new Politician("Helen Zille", 66, "FEMALE");
-        JuliusMalema    = new Politician("Julius Malema", 36, "MALE");
-        JacobZuma       = new President("Jacob Zuma", 70, "MALE");
-        BarryRoux       = new Lawyer("Barry Roux", 61, "MALE");
-        MichaelHulley   = new Architect("Michael Hulley", 58, "MALE");
-        
+        HelenZille = new Politician("Helen Zille", 66, "FEMALE");
+        JuliusMalema = new Politician("Julius Malema", 36, "MALE");
+        JacobZuma = new President("Jacob Zuma", 70, "MALE");
+        BarryRoux = new Lawyer("Barry Roux", 61, "MALE");
+        MichaelHulley = new Architect("Michael Hulley", 58, "MALE");
+
         nkandla_homestead = new Nklandla("Nkandla", "Nkandla", "Western Cape", "ZA");
         nkandla_homestead.setAmphitheatre(new Amphitheatre());
         nkandla_homestead.setChickenRun(new ChickenRun());
         nkandla_homestead.setSwimmingPool(new SwimmingPool());
 
     }
+
     /*
         - Initialising all Person classes before we use them;
         - Initialising HomeStead class also for Nkandla
@@ -83,6 +83,12 @@ public class HomesteadTest {
     @Test(expected = RuntimeException.class)
     public void testAcceptHZ() {
         nkandla_homestead.accept((Visitor) HelenZille);
+
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testAcceptJM() {
+        nkandla_homestead.accept((Visitor) JuliusMalema);
 
     }
 
