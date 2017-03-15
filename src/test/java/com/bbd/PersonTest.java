@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 import com.bbd.*;
 import com.bbd.Person.Type;
+import com.bbd.Politician.PoliticalParty;
 
 public class PersonTest {
 
@@ -22,12 +23,12 @@ public class PersonTest {
 
     @Before
     public void setUp() throws Exception {
-        HelenZille      = new Politician("Helen Zille", 66, "FEMALE");
-        JuliusMalema    = new Politician("Julius Malema", 36, "MALE");
+        HelenZille      = new Politician("Helen Zille", 66, "FEMALE",Politician.PoliticalParty.DA);
+        JuliusMalema    = new Politician("Julius Malema", 36, "MALE",Politician.PoliticalParty.EFF);
         BarryRoux       = new Lawyer("Barry Roux", 61, "MALE");
         BarryRoux       = new Lawyer("Barry Roux", 61, "MALE");
         MichaelHulley   = new Architect("Michael Hulley", 58, "MALE");
-        JacobZuma       = new President("Jacob Zuma", 70, "MALE");
+        JacobZuma       = new President("Jacob Zuma", 70, "MALE",Politician.PoliticalParty.ANC);
         
         JacobZuma.addAssociate(BarryRoux);
         JacobZuma.addAssociate(MichaelHulley);
@@ -42,6 +43,18 @@ public class PersonTest {
         assertEquals(HelenZille.getName(), "Helen Zille");
         assertEquals(JuliusMalema.getName(), "Julius Malema");
         assertEquals(BarryRoux.getName(), "Barry Roux");
+
+    }
+        /*
+        - Test Political Party
+    */
+
+    @Test
+    public void testPesonPoliticalParty() {
+        assertEquals(((Politician)HelenZille).getPoliticalParty(), PoliticalParty.DA);
+        assertEquals(((Politician)JuliusMalema).getPoliticalParty(), PoliticalParty.EFF);
+        assertEquals(((Politician)JacobZuma).getPoliticalParty(), PoliticalParty.ANC);
+        
 
     }
 

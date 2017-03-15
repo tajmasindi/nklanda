@@ -23,9 +23,9 @@ public class HomesteadTest {
 
     @Before
     public void setUp() throws Exception {
-        HelenZille = new Politician("Helen Zille", 66, "FEMALE");
-        JuliusMalema = new Politician("Julius Malema", 36, "MALE");
-        JacobZuma = new President("Jacob Zuma", 70, "MALE");
+        HelenZille = new Politician("Helen Zille", 66, "FEMALE",Politician.PoliticalParty.DA);
+        JuliusMalema = new Politician("Julius Malema", 36, "MALE",Politician.PoliticalParty.EFF);
+        JacobZuma = new President("Jacob Zuma", 70, "MALE",Politician.PoliticalParty.ANC);
         BarryRoux = new Lawyer("Barry Roux", 61, "MALE");
         MichaelHulley = new Architect("Michael Hulley", 58, "MALE");
 
@@ -37,32 +37,45 @@ public class HomesteadTest {
     }
 
     /*
-        - Initialising all Person classes before we use them;
-        - Initialising HomeStead class also for Nkandla
-        - set the values for required classes
+        - Test if Nkandla is an instance of a HomeStead
+      
     */
     @Test
     public void testHomestead() {
         assertEquals(nkandla_homestead instanceof HomeStead, true);
     }
 
+    /*
+            - Test if HelenZille is a  POLITICIAN
+      
+    */
     @Test
     public void testPoliticianTypeHelenZille() {
         assertEquals(HelenZille.getType(), Person.Type.POLITICIAN);
 
     }
-
+    /*
+            - Test if HelenZille is instanceof  Politician
+      
+    */
     @Test
     public void testPoliticianInstanceHelenZille() {
         assertEquals(HelenZille instanceof Politician, true);
 
     }
 
+    /*
+            - Test if JuliusMalema is a  POLITICIAN
+      
+    */
     @Test
     public void testPoliticianTypeJuliusMalema() {
         assertEquals(JuliusMalema.getType(), Person.Type.POLITICIAN);
     }
-
+    /*
+            - Test if JuliusMalema is instanceof  Politician
+      
+    */
     @Test
     public void testPoliticianInstanceJuliusMalema() {
         assertEquals(JuliusMalema instanceof Politician, true);
@@ -73,7 +86,10 @@ public class HomesteadTest {
         assertEquals(JacobZuma.getType(), Person.Type.PRESIDENT);
 
     }
-
+    /*
+            - Test if JacobZuma is instanceof  President
+      
+    */
     @Test
     public void testPresidentInstanceJacobZuma() {
         assertEquals(JacobZuma instanceof President, true);
