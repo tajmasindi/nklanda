@@ -12,15 +12,19 @@ public class HomesteadTest {
     Person HelenZille;
     Person JuliusMalema;
     Person JacobZuma;
-    Person BarryRoux;
+    Person BarryRoux;  
+    Person MichaelHulley;
 
     @Before
     public void setUp() throws Exception {
-        HelenZille = new Politician("Helen Zille", 50, "FEMALE");
-        JuliusMalema = new Politician("Julius Malema", 40, "MALE");
-        JacobZuma = new President("Jacob Zuma", 70, "MALE");
-        BarryRoux = new Lawyer("Barry Roux", 60, "MALE");
+        HelenZille      = new Politician("Helen Zille", 66, "FEMALE");
+        JuliusMalema    = new Politician("Julius Malema", 36, "MALE");
+        JacobZuma       = new President("Jacob Zuma", 70, "MALE");
+        BarryRoux       = new Lawyer("Barry Roux", 61, "MALE");
+        MichaelHulley   = new Architect("Michael Hulley", 58, "MALE");
+        
         nkandla_homestead = new Nklandla("Nkandla", "Nkandla", "Western Cape", "ZA");
+
     }
 
     @Test

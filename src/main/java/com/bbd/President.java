@@ -8,6 +8,7 @@ public class President extends Politician {
     public President(String n, int a, String g) {
         super(n, a, g);
         setType(Type.PRESIDENT);
+        associates = new ArrayList<Person>();
     }
 
     public void addAssociate(Person p) {
