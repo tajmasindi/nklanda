@@ -62,39 +62,14 @@ public class HomesteadTest {
 
     }
 
+    @Test(expected = RuntimeException.class)
     public void testAcceptHZ() {
-        assertEquals(nkandla_homestead instanceof HomeStead, true);
+        nkandla_homestead.accept((Visitor) HelenZille);
 
     }
 
     @Test
     public void testJacob() {
-        nkandla_homestead.accept(HelenZille);
+        nkandla_homestead.accept((Visitor) JacobZuma);
     }
-
-    @Test
-    public void testSwimming() {
-
-    }
-
-    @Test
-    public void testSwimmingPool() {
-
-    }
-
-    @Test
-    public void testChickens() {
-
-    }
-
-    @Test
-    public void testAmphi() {
-
-    }
-
-    @Test (expected = RuntimeException.class)
-    public void testIfPresident(){
-        
-    }
-
 }
