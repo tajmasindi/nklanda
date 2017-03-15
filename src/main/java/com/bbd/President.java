@@ -25,7 +25,7 @@ public class President extends Politician {
         boolean result = false;
 
         for (int i = 0; i < associates.size(); i++) {
-            if (associates.get(i).getName().equals(name)){
+            if (associates.get(i).getName().equalsIgnoreCase(name)){
                 result = true;
             }
         }
