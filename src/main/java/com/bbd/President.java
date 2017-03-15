@@ -8,6 +8,7 @@ public class President extends Politician {
     public President(String n, int a, String g) {
         super(n, a, g);
         setType(Type.PRESIDENT);
+        associates = new ArrayList<Person>();
     }
 
     public void addAssociate(Person p) {
@@ -16,7 +17,31 @@ public class President extends Politician {
         }
     }
 
-    public ArrayList<Person> getAssociates(){
+    public ArrayList<Person> getAssociates() {
         return associates;
+    }
+
+    public boolean associateInArray(String name) {
+        boolean result = false;
+
+        for (int i = 0; i < associates.size(); i++) {
+            if (associates.get(i).getName().equals(name)){
+                result = true;
+            }
+        }
+
+        return result;
+    }
+
+    public boolean associateInArray(Person.Type type) {
+        boolean result = false;
+
+        for (int i = 0; i < associates.size(); i++) {
+            if (associates.get(i).getType().equals(type)){
+                result = true;
+            }
+        }
+
+        return result;
     }
 }
