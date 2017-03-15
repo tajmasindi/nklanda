@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class President extends Politician {
     private ArrayList<Person> associates;
 
-    public President(String n, int a, String g) {
-        super(n, a, g);
+    public President(String n, int a, String g, Politician.PoliticalParty p) {
+        super(n, a, g, p);
         setType(Type.PRESIDENT);
         associates = new ArrayList<Person>();
     }
