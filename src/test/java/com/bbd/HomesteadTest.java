@@ -69,7 +69,7 @@ public class HomesteadTest {
 
     @Test
     public void testJacob() {
-
+        nkandla_homestead.accept(HelenZille);
     }
 
     @Test
@@ -90,6 +90,11 @@ public class HomesteadTest {
     @Test
     public void testAmphi() {
 
+    }
+
+    @Test (expected = RuntimeException.class)
+    public void testIfPresident(){
+        
     }
 
 }
