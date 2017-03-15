@@ -91,14 +91,23 @@ public class PersonTest {
         Checking if zuma list of Associates contains a Type.LAWYER
     */
     @Test public void testIfZumaHasALawyer(){        
-        assertNotNull((BarryRoux.getType() == Type.LAWYER) ? JacobZuma.getAssociates().contains(BarryRoux) : false  );
+         JacobZuma.associateInArray(Person.Type.LAWYER);  
     }
 
     /*
         Checking if zuma list of Associates contains a Type.ARCHITECT
     */
     @Test public void testIfZumaHasArchitech(){        
-        assertNotNull((MichaelHulley.getType() == Type.ARCHITECT) ? JacobZuma.getAssociates().contains(MichaelHulley) : false  );
+        assertTrue(JacobZuma.associateInArray(Person.Type.ARCHITECT));
+              
+    }
+        /*
+        Checking if zuma list of Associates contains a Type.LAWYER
+    */
+    @Test public void testIfZumaHasALawyerAndArchitec(){        
+         assertTrue(JacobZuma.associateInArray(Person.Type.ARCHITECT) && JacobZuma.associateInArray(Person.Type.LAWYER));   
     }
 
+
 }
+

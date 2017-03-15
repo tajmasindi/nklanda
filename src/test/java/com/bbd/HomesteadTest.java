@@ -76,4 +76,9 @@ public class HomesteadTest {
     public void testJacob() {
         nkandla_homestead.accept((Visitor) JacobZuma);
     }
+
+    @Test
+    public void testValidateNkandla() {
+        assertTrue(nkandla_homestead.valid());
+    }
 }
