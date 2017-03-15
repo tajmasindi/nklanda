@@ -13,40 +13,37 @@ public class PersonTest {
     private Person JuliusMalema;
     private Person BarryRoux;
 
-
     @Before
     public void setUp() throws Exception {
-        HelenZille = new Politician("Helen Zille",50,"FEMALE");
-         JuliusMalema = new Politician("Julius Malema",50,"MALE");
-          BarryRoux = new Lawyer("Berry  Malema",50,"MALE");
+        HelenZille = new Politician("Helen Zille", 50, "FEMALE");
+        JuliusMalema = new Politician("Julius Malema", 50, "MALE");
+        BarryRoux = new Lawyer("Berry  Malema", 50, "MALE");
 
     }
 
     @Test
     public void testPersonNames() {
-        assertEquals(HelenZille.getName(),"Helen Zille");
+        assertEquals(HelenZille.getName(), "Helen Zille");
     }
 
     @Test
     public void testPersonAges() {
-        assertEquals(HelenZille.getAge(),50);
+        assertEquals(HelenZille.getAge(), 50);
     }
 
     @Test
     public void testPersonGender() {
-        assertEquals(HelenZille.getGender(),"FEMALE");
+        assertEquals(HelenZille.getGender(), "FEMALE");
     }
 
     @Test
     public void testPersonType() {
-        assertEquals(HelenZille.getType(),Type.POLITICIAN);
+        assertEquals(HelenZille.getType(), Type.POLITICIAN);
     }
 
-        @Test
+    @Test
     public void isAPolitician() {
-        assertEquals(HelenZille instanceof Politician,true);
+        assertEquals(HelenZille instanceof Politician, true);
     }
-
-
 
 }

@@ -18,10 +18,6 @@ public class HomeStead {
             visitor.visit(this);
     }
 
-    public String toString() {
-        return "";
-    }
-
     public void setName(String n) {
         name = n;
     }

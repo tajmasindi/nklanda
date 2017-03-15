@@ -5,7 +5,7 @@ public class Nklandla extends HomeStead {
     ChickenRun chickenRun;
     Amphitheatre amphithetre;
 
-    public Nklandla(String n, String d, String p, String c){
-        super(n,d,p,c);
+    public Nklandla(String n, String d, String p, String c) {
+        super(n, d, p, c);
     }
 }

@@ -16,11 +16,11 @@ public class HomesteadTest {
 
     @Before
     public void setUp() throws Exception {
-        HelenZille = new Politician("Helen Zille",50,"FEMALE");
-         JuliusMalema = new Politician("Julius Malema",40,"MALE");
-         JacobZuma = new President("Jacob Zuma",70,"MALE");         
-          BarryRoux = new Lawyer("Barry Roux",60,"MALE");
-          nkandla_homestead = new Nklandla("Nkandla","Nkandla","Western Cape","ZA");
+        HelenZille = new Politician("Helen Zille", 50, "FEMALE");
+        JuliusMalema = new Politician("Julius Malema", 40, "MALE");
+        JacobZuma = new President("Jacob Zuma", 70, "MALE");
+        BarryRoux = new Lawyer("Barry Roux", 60, "MALE");
+        nkandla_homestead = new Nklandla("Nkandla", "Nkandla", "Western Cape", "ZA");
     }
 
     @Test
@@ -30,7 +30,7 @@ public class HomesteadTest {
 
     @Test
     public void testPoliticianTypeHelenZille() {
-        assertEquals(HelenZille.getType(),Person.Type.POLITICIAN);
+        assertEquals(HelenZille.getType(), Person.Type.POLITICIAN);
 
     }
 
@@ -42,21 +42,21 @@ public class HomesteadTest {
 
     @Test
     public void testPoliticianTypeJuliusMalema() {
-        assertEquals(JuliusMalema.getType(),Person.Type.POLITICIAN);
+        assertEquals(JuliusMalema.getType(), Person.Type.POLITICIAN);
     }
 
-        @Test
+    @Test
     public void testPoliticianInstanceJuliusMalema() {
-        assertEquals(JuliusMalema instanceof Politician,true);
+        assertEquals(JuliusMalema instanceof Politician, true);
     }
 
     @Test
     public void testPresidentTypeJacobZuma() {
-        assertEquals(JacobZuma.getType(),Person.Type.PRESIDENT);
+        assertEquals(JacobZuma.getType(), Person.Type.PRESIDENT);
 
     }
 
-        @Test
+    @Test
     public void testPresidentInstanceJacobZuma() {
         assertEquals(JacobZuma instanceof President, true);
 

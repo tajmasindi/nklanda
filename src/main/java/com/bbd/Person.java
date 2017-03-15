@@ -5,10 +5,10 @@ public class Person {
         PRESIDENT, LAWYER, ARCHITECT, POLITICIAN
     }
 
-    String name;
-    int age;
-    String gender;
-    Type personType;
+    private String name;
+    private int age;
+    private String gender;
+    private Type personType;
 
     public String getName() {
         return name;
