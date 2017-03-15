@@ -15,6 +15,13 @@ public class HomesteadTest {
     Person BarryRoux;  
     Person MichaelHulley;
 
+
+    /*
+        - Initialising all Person classes before we use them;
+        - Initialising HomeStead class also for Nkandla
+        - set the values for required classes
+    */
+
     @Before
     public void setUp() throws Exception {
         HelenZille      = new Politician("Helen Zille", 66, "FEMALE");
@@ -24,9 +31,16 @@ public class HomesteadTest {
         MichaelHulley   = new Architect("Michael Hulley", 58, "MALE");
         
         nkandla_homestead = new Nklandla("Nkandla", "Nkandla", "Western Cape", "ZA");
+        nkandla_homestead.setAmphitheatre(new Amphitheatre());
+        nkandla_homestead.setChickenRun(new ChickenRun());
+        nkandla_homestead.setSwimmingPool(new SwimmingPool());
 
     }
-
+    /*
+        - Initialising all Person classes before we use them;
+        - Initialising HomeStead class also for Nkandla
+        - set the values for required classes
+    */
     @Test
     public void testHomestead() {
         assertEquals(nkandla_homestead instanceof HomeStead, true);
