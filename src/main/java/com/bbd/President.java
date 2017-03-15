@@ -16,7 +16,7 @@ public class President extends Politician {
         }
     }
 
-    public String getAssociatesString(){
-        return associates.toString();
+    public ArrayList<Person> getAssociates(){
+        return associates;
     }
 }
