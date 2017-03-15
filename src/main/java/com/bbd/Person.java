@@ -1,6 +1,6 @@
 package com.bbd;
 
-public class Person {
+public class Person implements Visitor {
     enum Type {
         PRESIDENT, LAWYER, ARCHITECT, POLITICIAN
     }
@@ -40,5 +40,11 @@ public class Person {
 
     public void setType(Type t) {
         personType = t;
+    }
+
+    public void visit(HomeStead home) {
+        if (getType().equals(Person.Type.POLITICIAN)) {
+            throw new RuntimeException("You shall not pass!");
+        }
     }
 }
